@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.chinacompetition">
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- camera, gallery -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".contract.MoveCashActivity"></activity>
+        <activity android:name=".contract.CompletedContractActivity" />
+        <activity android:name=".contract.TemporaryAccountActivity" />
+        <activity android:name=".blockchain.CoinDepositActivity" />
+        <activity android:name=".blockchain.CoinActivity" />
+        <activity android:name=".blockchain.MoneyWithDrawalActivity" />
+        <activity android:name=".blockchain.MoneyChargeActivity" />
+        <activity android:name=".blockchain.MoneyActivity" />
+        <activity android:name=".Client.ClientProjectListContractActivity" />
+        <activity android:name=".contract.ContractDetailActivity" />
+        <activity android:name=".contract.ContractActivity" />
+        <activity android:name=".chat.ChatActivity" />
+        <activity android:name=".Client.ClientProjectListActivity" />
+        <activity android:name=".Client.RequestHireWritingActivity" />
+        <activity android:name=".freelancer.WaitingForFreelancerClientListActivity" />
+        <activity android:name=".freelancer.WaitingForFreelancerClientDetailActivity" />
+        <activity android:name=".freelancer.WaitingForFreelancerListActivity" />
+        <activity android:name=".Client.WaitingForClientDeveloperListActivity" />
+        <activity android:name=".Client.WaitingForClientDeveloperDetailActivity" />
+        <activity android:name=".Client.WaitingForClientListActivity" />
+        <activity android:name=".freelancer.FreelancerWritingActivity" />
+        <activity android:name=".freelancer.FreelancerDetailActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".bottom_navigation.FreelancerActivity" />
+        <activity android:name=".bottom_navigation.ProfileActivity" />
+        <activity android:name=".bottom_navigation.ClientActivity" />
+        <activity android:name=".bottom_navigation.MessageActivity" />
+        <activity android:name=".bottom_navigation.CategoryActivity" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- client -->
+        <activity android:name=".PostJobDir.JobEditActivity" />
+        <activity android:name=".PostJobDir.JobDetailActivity" />
+        <activity android:name=".PostJobDir.JobsListActivity" />
+        <activity
+            android:name=".PostJobDir.CalendarActivity"
+            android:theme="@android:style/Theme.Holo.Dialog.NoActionBar" />
+        <activity android:name=".PostJobDir.PostJobActivity" /> <!-- crop activity -->
+        <activity
+            android:name="com.soundcloud.android.crop.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- 사진 촬영을 위한 provide -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.chinacompetition.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="android:resource" />
+        </provider>
+    </application>
+
+</manifest>
