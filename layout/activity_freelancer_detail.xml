@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".freelancer.FreelancerDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/cooperation"
+                android:orientation="horizontal">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="8">
+
+                    <ImageView
+                        android:id="@+id/image_freelancer_detail_back"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/back" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center"
+
+                        android:textColor="#111111"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/image_freelancer_detail_image"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:src="@drawable/emptyprofile"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/text_freelancer_detail_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:text="이름"
+                    android:textSize="25dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="center|start"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    />
+
+
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TabHost
+                    android:id="@+id/tabHost_freelancer_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:orientation="vertical">
+
+                        <!-- TabWidget의 id값이 반드시 "tabs"로 지정되어야 함. -->
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+
+                        <!-- FrameLayout의 id값이 반드시 "tabcontent"로 지정되어야 함. -->
+                        <FrameLayout
+                            android:id="@android:id/tabcontent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <!-- 첫 번째 페이지. content1 -->
+                            <LinearLayout
+                                android:id="@+id/content_freelancer_detail_detail"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bottom_line"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="130dp"
+                                        android:orientation="vertical"
+                                        android:weightSum="5">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_marginLeft="15dp"
+                                            android:layout_weight="1"
+                                            android:text="자기소개"
+                                            android:textColor="#111111"
+                                            android:textSize="20dp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/text_freelancer_detail_introduce"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_marginLeft="18dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_weight="4"
+                                            android:text="자기소개"
+                                            android:textColor="#111111"
+                                            android:textSize="13dp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="5"
+                                    android:background="@drawable/bottom_line"
+                                    android:orientation="vertical"
+                                    android:weightSum="5">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="130dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_marginLeft="15dp"
+                                            android:layout_weight="1"
+                                            android:text="기술"
+                                            android:textColor="#111111"
+                                            android:textSize="20dp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/text_freelancer_detail_skill"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_marginLeft="18dp"
+                                            android:layout_marginTop="7dp"
+                                            android:layout_weight="4"
+                                            android:text="기술"
+                                            android:textColor="#111111"
+                                            android:textSize="13dp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="5"
+                                    android:background="@drawable/bottom_line"
+                                    android:orientation="vertical"
+                                    android:weightSum="5">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="130dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_marginLeft="15dp"
+                                            android:layout_weight="1"
+                                            android:text="위치"
+                                            android:textColor="#111111"
+                                            android:textSize="20dp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/text_freelancer_detail_location"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_marginLeft="18dp"
+                                            android:layout_weight="4"
+                                            android:text="위치"
+                                            android:textColor="#111111"
+                                            android:textSize="13dp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <!-- 두 번째 페이지. content2 -->
+                            <LinearLayout
+                                android:id="@+id/content_freelancer_detail_delivery"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/text_freelancer_detail_delivery"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+
+                            </LinearLayout>
+
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+                </TabHost>
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <LinearLayout
+        android:id="@+id/linear_freelancer_detail_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_freelancer_detail_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="result"/>
+
+        <Button
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/btn_freelancer_detail_hire"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="20"
+            android:background="@drawable/textview_layer"
+            android:textColor="#E6E4C1"
+            android:textSize="24dp"
+            android:text="고용요청"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
